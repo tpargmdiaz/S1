@@ -30,7 +30,8 @@ while True:
         # Si el valor ingresado es '1' el programa realizará la conversión de pesos a dólares. Se redondea el resultado a dos decimales.
 
         if moneda == "1":
-            Cotiz_USD = print(f"La cotización actual del USD es de ${ARS_USD()} ARS.")
+            ARS_USD_round = round(ARS_USD(), 2)
+            Cotiz_USD = print(f"La cotización actual del USD es de ${ARS_USD_round} ARS.")
             USD = ARS_USD()
             monto_en_ARS = float(input("Ingrese el monto de ARS que desea convertir a USD:"))
             monto_en_USD = monto_en_ARS / USD
@@ -41,7 +42,8 @@ while True:
         # Si el valor ingresado es '2' el programa realizará la conversión de euros a dólares. Se redondea el resultado a dos decimales.
 
         elif moneda == "2":
-            Cotiz_USD = print(f"La cotización actual del USD es de ${EUR_USD()} EUR.")
+            EUR_USD_round = round(EUR_USD(), 2)
+            Cotiz_USD = print(f"La cotización actual del USD es de ${EUR_USD_round} EUR.")
             USD = EUR_USD()
             monto_en_EUR = float(input("Ingrese el monto de EUR que desea convertir a USD:"))
             monto_en_USD = monto_en_EUR / USD
@@ -64,6 +66,6 @@ while True:
     
 
     # Control de errores.
-    
+
     except:
         print("Ha habido un error. Revise el valor ingresado e Intente nuevamente.")
